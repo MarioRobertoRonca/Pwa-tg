@@ -7,3 +7,5 @@
 [1012/223759.293:ERROR:exception_snapshot_win.cc(99)] thread ID 17704 not found in process
 [1012/223759.294:ERROR:process_reader_win.cc(123)] NtOpenThread: {Acesso Negado} Um processo solicitou acesso a um objeto, mas o direito de acesso não lhe foi concedido. (0xc0000022)
 [1012/223759.294:ERROR:exception_snapshot_win.cc(99)] thread ID 3984 not found in process
+[1021/180723.671:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
+[1021/230217.385:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)

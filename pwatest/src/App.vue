@@ -8,3 +8,9 @@ export default {
   name: 'App'
 }
 </script>
+
+<style>
+  #q-app{
+    background-color: black;
+  }
+</style>

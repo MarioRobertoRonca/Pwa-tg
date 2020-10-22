@@ -1,8 +1,4 @@
 
-
-
-
-
 <template>
 
   <!-- Div dos itens -->
