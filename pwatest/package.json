@@ -13,7 +13,8 @@
     "axios": "^0.18.1",
     "core-js": "^3.6.5",
     "md-gum-polyfill": "^1.0.0",
-    "quasar": "^1.14.2"
+    "quasar": "^1.14.2",
+    "vue-the-mask": "^0.11.1"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0"

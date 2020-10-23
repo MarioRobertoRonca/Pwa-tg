@@ -3,6 +3,7 @@
     <router-view />
   </div>
 </template>
+
 <script>
 export default {
   name: 'App'
@@ -11,6 +12,6 @@ export default {
 
 <style>
   #q-app{
-    background-color: black;
+    background-color: rgb(2, 0, 15);
   }
 </style>
