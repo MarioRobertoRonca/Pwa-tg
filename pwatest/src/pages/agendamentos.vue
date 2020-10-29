@@ -1,27 +1,7 @@
 <template>
-  <div class="q-pa-md q-gutter-sm">
-    <q-btn label="Small" color="primary" @click="small = true" />
+  <div class="q-pa-md q-gutter-sm constrain">
+    <!--Button do card-->
     <q-btn label="Medium" color="primary" @click="medium = true" />
-    <q-btn label="Full Width" color="primary" @click="fullWidth = true" />
-    <q-btn label="Full Height" color="primary" @click="fullHeight = true" />
-
-    <q-dialog
-      v-model="small"
-    >
-      <q-card style="width: 300px">
-        <q-card-section>
-          <div class="text-h6">Small</div>
-        </q-card-section>
-
-        <q-card-section class="q-pt-none">
-          Click/Tap on the backdrop.
-        </q-card-section>
-
-        <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="OK" v-close-popup />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
 
     <q-dialog
       v-model="medium"
@@ -41,55 +21,60 @@
       </q-card>
     </q-dialog>
 
-    <q-dialog
-      v-model="fullWidth"
-      full-width
-    >
-      <q-card>
-        <q-card-section>
-          <div class="text-h6">Full Width</div>
-        </q-card-section>
+    <!--Serviços-->
+   <div class="q-pa-md " style="max-width: 800px">
+    <q-list class="serve" bordered>
+      <q-item clickable v-ripple>
+        <q-item-section >Corte de cabelo</q-item-section>
+        <q-item-section avatar>R$ 20,00</q-item-section>
+        <q-item-section avatar>
+          <q-btn label="Agendar" color="primary" @click="medium = true" />
+        </q-item-section>
+      </q-item>
 
-        <q-card-section class="q-pt-none">
-          Click/Tap on the backdrop.
-        </q-card-section>
+      <q-separator color="primary" spaced />
 
-        <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="OK" v-close-popup />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
+      <q-item clickable v-ripple>
+        <q-item-section >Barba</q-item-section>
+        <q-item-section avatar>R$ 20,00</q-item-section>
+        <q-item-section avatar>
+          <q-btn label="Agendar" color="primary" @click="medium = true" />
+        </q-item-section>
+      </q-item>
 
-    <q-dialog
-      v-model="fullHeight"
-      full-height
-    >
-      <q-card class="column full-height" style="width: 300px">
-        <q-card-section>
-          <div class="text-h6">Full Height</div>
-        </q-card-section>
+      <q-separator color="primary" spaced />
 
-        <q-card-section class="col q-pt-none">
-          Click/Tap on the backdrop.
-        </q-card-section>
+      <q-item clickable v-ripple>
+        <q-item-section >Cabelo + Barba</q-item-section>
+        <q-item-section avatar>R$ 35,00</q-item-section>
+        <q-item-section avatar>
+          <q-btn label="Agendar" color="primary" @click="medium = true" />
+        </q-item-section>
+      </q-item>
+    </q-list>
 
-        <q-card-actions align="right" class="bg-white text-teal">
-          <q-btn flat label="OK" v-close-popup />
-        </q-card-actions>
-      </q-card>
-    </q-dialog>
   </div>
+
+  </div>
+
 </template>
+
 
 <script>
 export default {
   data () {
     return {
-      small: false,
       medium: false,
-      fullWidth: false,
-      fullHeight: false
     }
   }
 }
 </script>
+
+<style>
+  .serve{
+    border-color: #29e;
+    color:white;
+    font-size: 16px;
+  }
+  
+</style>
