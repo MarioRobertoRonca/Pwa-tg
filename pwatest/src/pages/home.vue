@@ -1,7 +1,22 @@
 
 <template>
   <!-- Div dos itens -->
-  <div class=" q-gutter-md">
+  <div class=" q-gutter-md q-px-lg">
+    <div class="q-px-lg q-pt-md">
+    <q-carousel
+      swipeable
+      animated
+      v-model="slide"
+      thumbnails
+      infinite
+    >
+      <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
+      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
+      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
+      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
+    </q-carousel>
+  </div>
+
     <q-list bordered padding class="constrain rounded-borders" style="min-width: 350px">
       <q-separator color="grey-7" spaced />
       <q-item-label header>Area-1</q-item-label>
@@ -112,7 +127,12 @@
 
 <script>
 export default {
-  name: "Home"
+  name: 'Home',
+  data () {
+    return {
+      slide: 1
+    }
+  }
 }
 </script>
 

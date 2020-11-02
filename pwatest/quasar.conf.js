@@ -98,7 +98,11 @@ module.exports = function (/* ctx */) {
         'QToolbarTitle',
         'QBtn',
         'QIcon',
-        'QDialog'
+        'QDialog',
+        'QCarousel',
+        'QCarouselControl',
+        'QCarouselSlide',
+        'QDate',
       ],
       // directives: [],
 
