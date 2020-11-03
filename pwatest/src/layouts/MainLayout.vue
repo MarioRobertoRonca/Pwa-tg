@@ -3,8 +3,8 @@
     <q-header class="bg-white text-grey-10" bordered>
       <q-toolbar class="constrain ">
         <q-btn
-          to="/camera"
-          icon="eva-camera-outline"
+          to="/configuracao"
+          icon="settings"
            class="large-screen-only q-nr-sn"
           size="18px"
           flat
@@ -16,8 +16,8 @@
            Barber Point
         </q-toolbar-title>
         <q-btn
-          to="/"
-          icon="eva-home-outline"
+          to="/home"
+          icon="home"
            class="large-screen-only q-nr-sn"
           size="18px"
           flat

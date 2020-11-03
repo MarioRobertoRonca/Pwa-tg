@@ -3,7 +3,7 @@
     <!--Button do card-->
     <q-btn label="Medium" color="primary" @click="medium = true" />
 
-    <q-dialog v-model="medium" color="warn"> 
+    <q-dialog v-model="medium"> 
       <q-card style="width: 700px; max-width: 80vw;">
         <q-card-section>
           <div class="text-h6">Medium</div>
