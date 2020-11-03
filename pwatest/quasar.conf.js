@@ -103,6 +103,7 @@ module.exports = function (/* ctx */) {
         'QCarouselControl',
         'QCarouselSlide',
         'QDate',
+        'QTime',
       ],
       // directives: [],
 

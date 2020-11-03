@@ -3,37 +3,24 @@
     <!--Button do card-->
     <q-btn label="Medium" color="primary" @click="medium = true" />
 
-    <q-dialog v-model="medium">
+    <q-dialog v-model="medium" color="warn"> 
       <q-card style="width: 700px; max-width: 80vw;">
         <q-card-section>
           <div class="text-h6">Medium</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none">
+          <!--Calendário-->
           <div class="q-pa-md">
-            <div class="q-gutter-sm">
-              <q-badge color="teal"> Model: {{ model }} </q-badge>
-              <q-badge color="purple" text-color="white" class="q-ma-md">
-                Mask: YYYY-MM-DD HH:mm
-              </q-badge>
-            </div>
-
-            <div class="q-gutter-md row items-start">
-              <q-date v-model="model" mask="YYYY-MM-DD HH:mm" color="purple" />
-              <q-time
-                v-model="time1"
-                :hour-options="hourOptionsTime1"
-                :minute-options="minuteOptionsTime1"
-                :second-options="secondOptionsTime1"
-                with-seconds
-              />
-
-              <q-time v-model="time2" :options="optionsFnTime2" with-seconds />
-
+            <div class="q-gutter-md  row items-start justify-center">
+              <q-date v-model="date" :options="optionsFn2" />
+          <!--Relógio-->
               <q-time v-model="time3" :options="optionsFnTime3" />
             </div>
-          </div>
+         </div>
         </q-card-section>
+
+        <!--Fim-->
 
         <q-card-actions align="right" class="bg-white text-teal">
           <q-btn flat label="OK" v-close-popup />
@@ -81,8 +68,42 @@ export default {
   data() {
     return {
       medium: false,
-      date: null
+      date: "",
+      options: [
+        "2019/02/01",
+        "2019/02/05",
+        "2019/02/06",
+        "2019/02/09",
+        "2019/02/23"
+      ],
+      time3: '10:56',
+
+      hourOptionsTime1: [ 9, 10, 11, 13, 15 ],
+      minuteOptionsTime1: [ 0, 15, 30, 45 ],
+      secondOptionsTime1: [ 0, 10, 20, 30, 40, 50 ],
     };
+  },
+
+  methods: {
+    optionsFn2(date) {
+      const parts = date.split("/");
+      return parts[2] % 2 === 0;
+    },
+    optionsFnTime2 (hr, min, sec) {
+      if (hr < 6 || hr > 15 || hr % 2 !== 0) {
+        return false
+      }
+      if (min !== null && (min <= 25 || min >= 58)) {
+        return false
+      }
+      if (sec !== null && sec % 25 !== 0) {
+        return false
+      }
+      return true
+    },
+    optionsFnTime3 (hr) {
+      return hr % 2 === 0 || hr % 3 === 0
+    },
   }
 };
 </script>
