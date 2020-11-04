@@ -107,6 +107,7 @@ module.exports = function (/* ctx */) {
         'QCard',
         'QCardSection',
         'QCardActions',
+        'QUploader',
       ],
       // directives: [],
 

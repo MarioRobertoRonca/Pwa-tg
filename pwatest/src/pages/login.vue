@@ -38,7 +38,7 @@
 
       <!--Botão Criar Conta-->
       <div class="row justify-center q-ma-md">
-        <q-btn class="button" color="primary" label="Criar conta"/>
+        <q-btn to="/createAccount" class="button" color="primary" label="Criar conta"/>
       </div>
 
       <!--Botão Esqueci minha senha-->
