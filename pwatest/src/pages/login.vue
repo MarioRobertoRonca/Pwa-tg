@@ -1,8 +1,7 @@
 <template>
-  <q-page class="constrain-more q-pa-md ">
-    
+  <q-page class="constrain-more q-pa-xl ">
     <!--Logo-->
-    <div class="q-pa-ma">
+    <div class="q-pt-sm">
       <img class="full-width"
        src="https://lh3.googleusercontent.com/pw/ACtC-3cWlUvueLUYbSQUa_K5Zx87Fju-tYA3hDMH2wqnjsrL51XuzRD3dSyNvZ5IhCm6J0dl6JpX_6aTtLZHYoE8bcFtOA5-w5BtC7lyJTLhGupgAHNIjSM73tb40cPh8wL32c9Znuf8n9mO1FgP6IQd061y=s310-no?authuser=0">
 
@@ -11,8 +10,6 @@
       <q-btn class="btn-icon" color="primary" icon="eva-scissors-outline" size="lg" round/>
     </div>
     </div>
-
-    
 
     <!--Formulário de Login -->
       <div class="row justify-center q-ma-md" >
@@ -78,7 +75,7 @@ export default {
  }
 
  .button{
-   width: 200px;
+   width: 190px;
  }
 
  .btn-icon{
