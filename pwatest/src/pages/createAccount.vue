@@ -7,6 +7,7 @@
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaj0ucKVpTNbey2YUj2f0V_MDQ1G6jBiwt2w&usqp=CAU"
         />
       </q-avatar>
+      <h5 style="text-algin:center; color: #fff; margin:top ">Crie sua conta</h5>
     </div>
 
     <!--Formulário de Cadastro - Linha 1-->
@@ -91,28 +92,28 @@
       <div class="row justify-center q-ma-md">
       <q-input class="input-small-s" color= "#45e" bg-color="grey-3" filled v-model="text"  type = "Number" :dense="dense" label= "Nº" >
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="filter_1"/>
           </template>
         </q-input>
 
     <!--Complemento-->
         <q-input class="input-small" color= "#45e" bg-color="grey-3" filled v-model="text" :dense="dense" label= "Complemento" >
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="apartment"/>
           </template>
         </q-input>
 
     <!--Cidade-->
         <q-input class="input-small" color= "#45e" bg-color="grey-3" filled v-model="text" :dense="dense" label= "Cidade" >
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="satellite"/>
           </template>
         </q-input>
 
     <!--Estado-->
         <q-input class="input-small-s" color= "#45e" bg-color="grey-3" filled v-model="text" :dense="dense" label= "Estado" >
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="local_play"/>
           </template>
         </q-input>
     </div>
@@ -122,25 +123,29 @@
     <div class="row justify-center q-ma-md">
       <q-input class="input" color= "#45e" bg-color="grey-3" filled v-model="text" :dense="dense" label= "CEP" >
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="location_on"/>
           </template>
         </q-input>
 
     <!--Telefone-->
         <q-input class="input-tell" color= "#45e" bg-color="grey-3" filled v-model="phone" label="Telefone" mask="(##) #### - ####" hint="Mask: (##) #### - ####">
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="phone"/>
           </template>
         </q-input>
 
         <!--Celular-->
         <q-input class="input-cell" color= "#45e" bg-color="grey-3" v-model="phone" filled  label="Celular" mask="(##) ##### - ####" hint="Mask: (##) ##### - ####">
           <template v-slot:prepend>
-            <q-icon name="person"/>
+            <q-icon name="phonelink_ring"/>
           </template>
         </q-input>
-       
     </div>
+
+    <!--Botão Criar Conta-->
+      <div class="row justify-center q-ma-md">
+        <q-btn to="/#" class="button" color="primary" label="Criar conta"/>
+      </div>
   </div>
 </template>
 
@@ -188,4 +193,8 @@ export default {
   padding: 16px;
   width: 205px;
 }
+.button{
+  width: 200px;
+  margin: 10px 40px;
+ }
 </style>
