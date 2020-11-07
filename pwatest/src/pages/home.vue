@@ -15,14 +15,14 @@
       <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
       <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
     </q-carousel>
-  </div>
+    </div>
 
     <q-list bordered padding class="constrain rounded-borders" style="min-width: 350px">
       <q-separator color="grey-7" spaced />
       <q-item-label header>Area-1</q-item-label>
 
       <!--Novo Agendamento-->
-      <q-item clickable v-ripple to="/Camera">
+      <q-item clickable v-ripple to="/agendamentos">
         <q-item-section avatar top>
           <q-avatar icon="schedule" color="primary" text-color="white" />
         </q-item-section>
@@ -45,7 +45,7 @@
 
         <q-item-section>
           <q-item-label class="text-title" lines="1">Meus Agendamentos</q-item-label>
-          <q-item-label class="text-corpo" caption >Clique aqui para acessar seus agendamentos</q-item-label>
+          <q-item-label  to="" class="text-corpo" caption >Clique aqui para acessar seus agendamentos</q-item-label>
         </q-item-section>
 
         <q-item-section side>
@@ -145,5 +145,5 @@ export default {
     color: #ccc;
     font-size: 12px;
   }
-  
+
 </style>

@@ -34,7 +34,7 @@
 
       <!--Botão de Login-->
       <div class =" row justify-center q-ma-md">
-        <q-btn class="button" color="primary" label="Login"/>
+        <q-btn to="/home" class="button" color="primary" label="Login"/>
       </div>
 
       <!--Botão Criar Conta-->
@@ -46,7 +46,7 @@
       <div class="row justify-center q-ma-md">
         <q-btn flat class="button" color="primary" label="Esqueci minha senha"/>
       </div>
-      
+
    </q-page>
 </template>
 
