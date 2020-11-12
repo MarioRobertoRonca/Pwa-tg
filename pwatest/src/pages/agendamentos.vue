@@ -1,27 +1,17 @@
 <template>
   <div>
     <div>
-      <div class="q-px-lg q-pt-xl">
+      <div class="q-pa-md  ">
         <q-carousel swipeable animated v-model="slide" thumbnails infinite>
           <q-carousel-slide
             :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
+            img-src="https://www.dicasmei.com.br/upload/dicas/8ea7f82bb63771b8bc2f18c963cf6aa3.png"
           />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
+          
         </q-carousel>
       </div>
     </div>
+    <!--Data e Hora de Agendamento-->
     <div class="q-pa-md q-gutter-sm constrain">
       <q-dialog v-model="medium">
         <q-card style="width: 700px; max-width: 80vw">
@@ -39,46 +29,139 @@
               </div>
             </div>
           </q-card-section>
-
-          <!--Fim-->
-
           <q-card-actions align="right" class="bg-white text-teal">
             <q-btn flat label="OK" v-close-popup />
           </q-card-actions>
         </q-card>
       </q-dialog>
 
-      <!--Serviços-->
-      <div class="q-pa-md" style="max-width: 800px">
+      <!--Lista de Serviços-->
+      <div class="q-pa-ls" style="max-width: 800px">
         <q-list class="serve" bordered>
+          <!--Cortes-->
+          <q-item-label header class="list-title">Cortes</q-item-label>
+
+          <q-separator color="primary" spaced />
+
           <q-item clickable v-ripple>
-            <q-item-section>Corte de cabelo</q-item-section>
+            <q-item-section>Corte Raspado</q-item-section>
             <q-item-section avatar>R$ 20,00</q-item-section>
             <q-item-section avatar>
               <q-btn label="Agendar" color="primary" @click="medium = true" />
             </q-item-section>
           </q-item>
 
+          <q-item clickable v-ripple>
+            <q-item-section>Corte Social</q-item-section>
+            <q-item-section avatar>R$ 25,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Sombrancelha</q-item-section>
+            <q-item-section avatar>R$ 10,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Pézinho</q-item-section>
+            <q-item-section avatar>R$ 10,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Corte disfarçado na navalha</q-item-section>
+            <q-item-section avatar>R$ 30,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+        <!--Barbas-->
+         <q-separator color="primary" spaced />
+         <q-item-label header class="list-title" >Barbas</q-item-label>
           <q-separator color="primary" spaced />
 
           <q-item clickable v-ripple>
-            <q-item-section>Barba</q-item-section>
+            <q-item-section>Barba Simples</q-item-section>
             <q-item-section avatar>R$ 20,00</q-item-section>
             <q-item-section avatar>
               <q-btn label="Agendar" color="primary" @click="medium = true" />
             </q-item-section>
           </q-item>
 
+          <q-item clickable v-ripple>
+            <q-item-section>Barba Pigmentada</q-item-section>
+            <q-item-section avatar>R$ 45,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Barba com toalha quente</q-item-section>
+            <q-item-section avatar>R$ 30,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <!--Químicas-->
+         <q-separator color="primary" spaced />
+         <q-item-label header class="list-title">Químicas</q-item-label>
           <q-separator color="primary" spaced />
 
           <q-item clickable v-ripple>
-            <q-item-section>Cabelo + Barba</q-item-section>
+            <q-item-section>Luzes</q-item-section>
+            <q-item-section avatar>R$ 25,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Tintura</q-item-section>
+            <q-item-section avatar>R$ 20,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Hidratação</q-item-section>
+            <q-item-section avatar>R$ 20,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Progressiva</q-item-section>
+            <q-item-section avatar>R$ 60,00</q-item-section>
+            <q-item-section avatar>
+              <q-btn label="Agendar" color="primary" @click="medium = true" />
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section>Relaxamento</q-item-section>
             <q-item-section avatar>R$ 35,00</q-item-section>
             <q-item-section avatar>
               <q-btn label="Agendar" color="primary" @click="medium = true" />
             </q-item-section>
           </q-item>
         </q-list>
+
+        <!--Botão confirmar agendamento-->
+      <div class="row justify-center q-ma-md">
+        <q-btn class="button" color="primary" label="Confirmar agendamento"/>
+      </div>
       </div>
     </div>
   </div>
@@ -136,4 +219,15 @@ export default {
   color: white;
   font-size: 16px;
 }
+.list-title{
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.button{
+   width: 240px;
+   padding: 2px 2px;
+   margin: 5px 5px;
+ }
 </style>
